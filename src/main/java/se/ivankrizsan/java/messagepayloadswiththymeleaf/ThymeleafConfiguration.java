@@ -67,7 +67,13 @@ public class ThymeleafConfiguration {
         theResourceTemplateResolver.setResolvablePatterns(
             Collections.singleton(JSON_TEMPLATES_RESOLVE_PATTERN));
         theResourceTemplateResolver.setSuffix(".json");
-        theResourceTemplateResolver.setTemplateMode("json");
+        /*
+         * There is no json template mode so the next line has
+         * been commented out. Thymeleaf will recognize the
+         * ".json" template resource suffix so there is no need
+         * to set a template mode.
+         */
+        // theResourceTemplateResolver.setTemplateMode("json");
         theResourceTemplateResolver.setCharacterEncoding("UTF-8");
         theResourceTemplateResolver.setCacheable(false);
         theResourceTemplateResolver.setOrder(2);
